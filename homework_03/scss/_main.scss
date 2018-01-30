@@ -5,6 +5,12 @@
 	&::-moz-placeholder          {@content};
 	&:-ms-input-placeholder      {@content}; 
 }
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
 @mixin h1 {
 	h1 {
 		text-align: center;
@@ -59,6 +65,7 @@
 
 @mixin links {
 	a {
+		@include transition(ease-out 0.5s);
 		&:link {
 			color: $linkColor;
 		}
@@ -68,7 +75,7 @@
 		&:hover {
 			color: lighten($linkColor,20%);
 			text-decoration: none;
-			transition: $linkTransition;
+			@include transition(ease-out 0.5s);
 		}
 	}
 }
@@ -181,6 +188,12 @@ table{
 		border: 1px solid $btnColor;
 		background-color: transparent;
 		font-size: $btnSize;
+		@include transition(ease-out 0.4s);
+		&:hover{
+			background-color: $btnColor;
+			@include transition(ease-out 0.4s);
+			color: #fff;
+		}
 	}
 	
 }
