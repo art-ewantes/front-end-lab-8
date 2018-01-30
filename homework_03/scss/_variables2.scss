@@ -1,0 +1,64 @@
+// Author art-ewantes
+
+//Body
+$mainFont: "Times New Roman", Times, serif;
+$fontSize: 16px;
+$bodyColor: rgba(198, 238, 252, 0.53);
+
+
+//Content
+$contentWidth: 1000px;
+$contentBackground: #3b3b3b;
+$padding: 20px;
+$positioning: 0 auto;
+
+//Titles
+$titleAlign: center;
+$h1Margin: 5px 40px 20px 0;
+$titleColor:#fccd10;
+$register: uppercase;
+$textColor: lighten( $contentBackground, 100% );
+
+//Format text
+$textTransform: uppercase;
+$silverColor: silver;
+$textAlignRight: right;
+$textAlignLeft: left;
+$lineHeight: 1.8;
+
+//Img
+$imgPadding: 2px;
+$imgBorderColor: $titleColor;
+
+//Brief
+$briefColor: #fff178;
+$briefWidth: 100%;
+$briefMargin: 0 0 35px 0;
+$briefPadding: 20px;
+$briefFloat: none;
+
+//Links
+$linkColor: #f5c70f;
+$linkTransition: 0.4s ease-out;
+
+//Table
+$fontWeight: normal;
+$tableUpperCase: uppercase;
+$tableHeadColor: #94a34e;
+$tableBkgColor: #677d01;
+$tableBorderColor : #ffffff;
+$tableWidth: 95%;
+
+//Form
+$labelPadding: 0;
+$inputPadding: 5px 3px;
+$inputMargin: 0 0 15px;
+$widthFormElements: 100%;
+$formColorBorder: #94A34E;
+$colorInputs: #757575;
+$colorLable: #fccd10;
+
+// Button
+$btnPadding: 10px 45px;
+$btnColor: #fccd10;
+$btnSize: 19px;

@@ -1,0 +1,186 @@
+//Start Mixins
+@mixin placeholder {
+	&::-webkit-input-placeholder {@content};
+	&:-moz-placeholder           {@content};
+	&::-moz-placeholder          {@content};
+	&:-ms-input-placeholder      {@content}; 
+}
+@mixin h1 {
+	h1 {
+		text-align: center;
+		margin: 5px 0 25px 0;
+		color: $titleColor;
+		text-transform: $register;	
+	}
+}
+
+@mixin h2 {
+	h2 {
+		color: $titleColor;
+		margin: 15px 0 25px 0;
+		}
+	}
+
+@mixin p {
+	p { color: $textColor;
+		font-family: $mainFont;
+		font-size: $fontSize;
+		padding: 0 0 20px 0;
+	}
+}
+
+@mixin img {
+	img {
+		border: 2px solid $imgBorderColor;
+		padding: $imgPadding;
+
+		&.img-left {
+			float:left;
+			margin: 0 20px 10px 0;
+		}
+
+		&.img-right {
+			float: right;
+			margin: 0 0 10px 25px; 
+		}  
+	}
+}
+
+@mixin brief {
+	.brief {
+		background-color: $briefColor;
+		width: $briefWidth;
+		margin: $briefMargin;
+		padding: $briefPadding;
+		float: $briefFloat;
+		box-sizing: border-box;
+	}
+}
+
+@mixin links {
+	a {
+		&:link {
+			color: $linkColor;
+		}
+		&:visited {
+			color:$linkColor
+		}
+		&:hover {
+			color: lighten($linkColor,20%);
+			text-decoration: none;
+			transition: $linkTransition;
+		}
+	}
+}
+
+@mixin tableHeading {
+	th{
+		background: $tableHeadColor;
+		text-transform: $tableUpperCase;
+		font-weight: $fontWeight;
+		padding: 10px 15px;
+		text-align: left;
+		border-right: 1px solid $tableBorderColor;
+		&:last-child {
+			border-right:none;
+		}
+	}	
+}
+
+//End Mixins
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: $bodyColor;
+}
+
+#content {
+	margin: $positioning;
+	padding: 20px;
+	width: $contentWidth;
+	background-color: $contentBackground;
+}
+@include h1;
+@include h2;
+@include p;
+@include img;
+@include brief;
+@include links;
+table{
+	width: 95%;
+	border-collapse: collapse;
+	margin-bottom: 60px;
+	background-color:$tableBkgColor;
+	caption {
+		text-align: right;
+	}
+	@include tableHeading;
+	tr{
+
+		&+tr{
+			border-bottom: 1px solid $tableHeadColor;
+		}
+
+		td{
+			padding: 10px 15px;
+			color: $textColor;
+		}
+	}
+}
+.contact-form{
+	p{
+		display: flex;
+		padding: $labelPadding;
+		label{
+			flex: 1;
+			&:last-child{
+				text-align: $textAlignRight;
+				padding-left: 20px;
+			}
+		}
+	}
+	label{
+		span{
+			display: block;
+			text-transform: $textTransform;
+			color: $colorLable;
+			font-size: $fontSize;
+			text-align: $textAlignLeft;
+			line-height: $lineHeight;
+		}
+		input{
+			width: $widthFormElements;
+			box-sizing: border-box;
+			padding: $inputPadding;
+			margin: $inputMargin;
+			@include placeholder {
+				color: $colorInputs;
+			}
+			border: 1px solid $formColorBorder;
+		}
+		textarea{
+			box-sizing: border-box;
+			width: $widthFormElements;
+			@include placeholder {
+				color: $colorInputs;
+			}
+			border: 1px solid $formColorBorder;
+			padding: $inputPadding;
+			margin: $inputMargin;
+		}
+	}
+	button{
+		padding: $btnPadding;
+		color: $btnColor;
+		text-transform: $textTransform;
+		border: 1px solid $btnColor;
+		background-color: transparent;
+		font-size: $btnSize;
+	}
+	
+}
