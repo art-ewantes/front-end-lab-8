@@ -1,4 +1,5 @@
 *.docx
 *.json
 design/
+node_modules/
 
