@@ -314,6 +314,9 @@ footer p{
     .footer-nav ul li:nth-child(2) a{
         text-decoration: none;
     }
+    .logo img{
+        max-width: 100px;
+    }
 }
 
 
