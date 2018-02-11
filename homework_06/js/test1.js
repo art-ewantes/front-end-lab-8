@@ -15,9 +15,7 @@ window.onload = function(){
 
     if ((firstSide <= (secondSide + thirdSide)) && (secondSide <= (firstSide + thirdSide)) && (thirdSide <= (firstSide + secondSide))){
         if (firstSide == secondSide && firstSide == thirdSide && secondSide == thirdSide){
-            console.log(
-                " Type of triangle is Equilateral triangle and square is " + area
-            );
+            console.log("Type of triangle is Equilateral triangle and square is " + area);
         }else if (
             (secondSide == thirdSide && secondSide != firstSide) ||
             (firstSide == thirdSide && firstSide != secondSide) ||
